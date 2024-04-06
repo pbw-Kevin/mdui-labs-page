@@ -2,37 +2,36 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="http://files-bowenya.diaries.ga/images/icon1.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <meta name="renderer" content="webkit"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=5.0">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  <title>是博文呀</title>
-  <meta name="description" content="currentItem.description" />
-  <link rel="stylesheet" href="https://cdn.w3cbus.com/library/mdui/1.0.2/css/mdui.min.css"><link rel="stylesheet" href="https://cdn.w3cbus.com/mdui/docs~1/static/index.0132e177.css">
+  <link rel="icon" type="image/png" href="/static/icon.png">
+  <title>AIR-Kevin的实验室</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+  <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+  
+  <!-- Filled -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Outlined -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <!-- Rounded -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- Sharp -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <!-- Two Tone -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
 </head>
-<body
-  class="
-    mdui-drawer-body-left
-    mdui-appbar-with-toolbar
-    mdui-theme-primary-indigo
-    mdui-theme-accent-pink
-    mdui-theme-layout-auto"
-  id="p-d"
->
-<header class="appbar mdui-appbar mdui-appbar-fixed">
-  <div class="mdui-toolbar mdui-color-theme">
-    <span
-      class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
-      mdui-drawer="{target: '#main-drawer', swipe: true}"
-    >
-      <i class="mdui-icon material-icons">menu</i>
-    </span>
-    <a href="http://bowenya.diaries.ga" class="mdui-typo-title">是博文呀</a>
-    <div class="mdui-toolbar-spacer"></div>
-  </div>
-</header>
-<div class="mdui-drawer" id="main-drawer">
+<body>
+<mdui-top-app-bar style="position: absolute;">
+  <mdui-button-icon icon="menu"></mdui-button-icon>
+  <mdui-top-app-bar-title>AIR-Kevin的实验室</mdui-top-app-bar-title>
+  <div style="flex-grow: 1"></div>
+</mdui-top-app-bar>
+<div>
+<mdui-navigation-drawer open="true" close-on-overlay-click order="2" style="position: absolute; top: 64px;">
+  <mdui-list>
+    <mdui-list-item icon="home" href="//air-kevin.rf.gd">返回主页</mdui-list-item>
+  </mdui-list>
+</mdui-navigation-drawer>
+<div class="mdui-drawer" id="main-drawer" >
   <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
     <div class="
           mdui-collapse-item
@@ -45,97 +44,32 @@
                     mdui-list-item
                     mdui-ripple
                     "
-                >主页</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/blog"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >博客</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/links"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >挂友链</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/linklist"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >友链列表</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/mclover"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >MC热爱者</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/oier"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >OIer</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/support"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >赞助</a>
-          </div>
-		  <div class="mdui-collapse-item-header mdui-ripple">
-            <a
-                  href="http://bowenya.diaries.ga/contact"
-                  class="
-                    mdui-list-item
-                    mdui-ripple
-                    "
-                >联系我</a>
+                >返回主页</a>
           </div>
         </div>
-        </div>
+	  </div>
   </div>
 </div>
 <a id="anchor-top"></a>
 
 <div class="mdui-card card">
   <div class="mdui-card-primary">
-  <div class="mdui-card-primary-title">是博文呀</div>
+  <div class="mdui-card-primary-title">鸣谢</div>
   </div>
   
   <div class="mdui-card-content mdui-typo">
-	<h4>欢迎来到我的破主页！</h4><br>
-	本人小学生一枚——<br>
-	MC热爱者,OIer,也是学霸呀~<br>
-	接受任何非恶意或骚扰的<a href="http://bowenya.diaries.ga/contact">联系</a>,挂友链请进入<a href="http://bowenya.diaries.ga/links">挂友链</a>
-	<h4>通往</h4><br>
-	<a href="http://bowenya.diaries.ga/mclover">MC热爱者</a><br>
-	<a href="http://bowenya.diaries.ga/oier">OIer</a><br>
-	<a href="http://bowenya.diaries.ga/links">挂友链</a><br>
-	<a href="http://bowenya.diaries.ga/contact">联系我</a><br>
-	<h4>赞助</h4><br>
-	<a href="http://bowenya.diaries.ga/support">去赞助</a><br>
+	感谢<a href="http://diaries.ga">DIARIES.GA</a>提供的平台<br>
+	感谢<a href="https://ltya.top">岚天呀</a>构建的网站<br>
+	感谢<a href="https://github.com/KawaiiZapic">Zapic</a>构建的网站主页<br>
+	感谢我的朋友<a href="http://wrkkk.diaries.ga/links">汪瑞锟</a>向我介绍这么好的免费托管网站<br>
+	包括但不限于以上的人或网站都对我们这个网站的建立提供了极大的支持<br>
+	希望在大家和屏幕前的您能够提出宝贵的意见或建议,让我的网站更加完善和正确!<br><br>
+	- 2022.9.28 庞博文
   </div>
   </div><br><br><br>
   <footer class="mdui-text-center mdui-typo">
-    <p><a href="http://bowenya.diaries.ga/versions" rel="nofollow" class="a-p">版本历史</a>&nbsp;<a href="http://bowenya.diaries.ga/thanks" rel="nofollow" class="a-p">鸣谢</a>&nbsp;<a href="http://bowenya.diaries.ga/help" rel="nofollow" class="a-p">帮助</a><br>Copyright Since 2022 庞博文</p>
-    </footer>
-<script src="https://cdn.w3cbus.com/library/mdui/1.0.2/js/mdui.min.js"></script><script src="https://cdn.w3cbus.com/mdui/docs~1/static/index.95ae2041.js"></script>
+    <p>&copy; 2024 <a href="//air-kevin.rf.gd" rel="nofollow" target="_blank">AIR-Kevin</a><br>由 <a href="https://www.mdui.org" rel="nofollow" target="_blank">MDUI</a> 提供设计支持</p>
+  </footer>
+</div>
+</body>
+</html>
