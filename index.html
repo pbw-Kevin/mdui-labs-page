@@ -1,57 +1,90 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="/static/icon.png">
-  <title>AIR-Kevin的实验室</title>
-  
-  <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
-  <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
-  
-  <!-- Filled -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Outlined -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <!-- Rounded -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-  <!-- Sharp -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-  <!-- Two Tone -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
-</head>
-<body>
-<mdui-top-app-bar style="position: absolute;">
-  <mdui-button-icon icon="menu"></mdui-button-icon>
-  <mdui-top-app-bar-title>AIR-Kevin的实验室</mdui-top-app-bar-title>
-  <div style="flex-grow: 1"></div>
-</mdui-top-app-bar>
-<div>
-<mdui-navigation-drawer open="true" close-on-overlay-click order="2" style="position: absolute; top: 64px;">
-  <mdui-list>
-    <mdui-list-item nonclickable>导航</mdui-list-item>
-    <mdui-list-item icon="home" href="//air-kevin.rf.gd">返回主页</mdui-list-item>
-  </mdui-list>
-</mdui-navigation-drawer>
-<a id="anchor-top"></a>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="/static/icon.png">
+        <title>AIR-Kevin的实验室</title>
 
-<div class="mdui-card card">
-  <div class="mdui-card-primary">
-  <div class="mdui-card-primary-title">鸣谢</div>
-  </div>
-  
-  <div class="mdui-card-content mdui-typo">
-	感谢<a href="http://diaries.ga">DIARIES.GA</a>提供的平台<br>
-	感谢<a href="https://ltya.top">岚天呀</a>构建的网站<br>
-	感谢<a href="https://github.com/KawaiiZapic">Zapic</a>构建的网站主页<br>
-	感谢我的朋友<a href="http://wrkkk.diaries.ga/links">汪瑞锟</a>向我介绍这么好的免费托管网站<br>
-	包括但不限于以上的人或网站都对我们这个网站的建立提供了极大的支持<br>
-	希望在大家和屏幕前的您能够提出宝贵的意见或建议,让我的网站更加完善和正确!<br><br>
-	- 2022.9.28 庞博文
-  </div>
-  </div><br><br><br>
-  <mdui-bottom-app-bar class="mdui-text-center mdui-typo" scroll-target>
-    <p>&copy; 2024 <a href="//air-kevin.rf.gd" rel="nofollow" target="_blank">AIR-Kevin</a><br>由 <a href="https://www.mdui.org" rel="nofollow" target="_blank">MDUI</a> 提供设计支持</p>
-  </mdui-bottom-app-bar>
-</div>
-</body>
+        <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+        <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+		
+		<script type="module">
+			mdui.setColorScheme('#B8FFEA', {
+				customColors: [
+					{
+						name: 'text',
+						value: '#000000'
+					}
+				]
+			});
+		</script>
+
+        <!-- Filled -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Outlined -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <!-- Rounded -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <!-- Sharp -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <!-- Two Tone -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            :root{
+                --mdui-color-text-light: 25, 28, 29;
+                --mdui-color-text-dark: 225, 227, 227;
+            }
+            mdui-top-app-bar{
+                background-color: rgb(var(--mdui-color-primary-container));
+                box-shadow: var(--mdui-elevation-level3);
+            }
+			mdui-navigation-drawer{
+				box-shadow: var(--mdui-elevation-level2);
+			}
+			a{
+				color: rgb(254, 134, 176);
+				text-decoration: none;
+			}
+			a:hover{
+				color: rgb(238, 109, 154);
+				text-decoration: none;
+			}
+			.top-title{
+				color: rgb(var(--mdui-color-text));
+			}
+			.top-title:hover{
+				color: rgb(var(--mdui-color-text));
+			}
+        </style>
+        <mdui-top-app-bar style="position: fixed;">
+            <mdui-button-icon icon="menu" class="drawer-control"></mdui-button-icon>
+            <mdui-top-app-bar-title>
+                <a class="top-title" href="/labs/">AIR-Kevin的实验室</a>&nbsp;&nbsp;
+				<a class="top-title" href="/" style="font-size: 14px;">返回主页</a>&nbsp;
+				<a class="top-title" href="/blog/" style="font-size: 14px;">返回博客</a>
+            </mdui-top-app-bar-title>
+        </mdui-top-app-bar>
+        <mdui-navigation-drawer class="navigation-drawer" open="true" close-on-overlay-click style="position: absolute; top: 64px;">
+            <mdui-list>
+                <mdui-list-item nonclickable>导航</mdui-list-item>
+                <mdui-list-item icon="home" href="/labs/">返回首页</mdui-list-item>
+                <mdui-list-item icon="search" href="/labs/search">搜索项目</mdui-list-item>
+                <mdui-list-item icon="bookmarks" href="/labs/tags">标签</mdui-list-item>
+                <mdui-list-item icon="info" href="/labs/about">关于本页</mdui-list-item>
+            </mdui-list>
+        </mdui-navigation-drawer>
+        <mdui-bottom-app-bar class="mdui-text-center mdui-typo" scroll-target>
+            <p>
+                &copy; 2024 <a href="//air-kevin.rf.gd" rel="nofollow" target="_blank">AIR-Kevin</a><br>
+                由 <a href="https://www.mdui.org" rel="nofollow" target="_blank">MDUI</a> 提供设计支持
+            </p>
+        </mdui-bottom-app-bar>
+		<script>
+			const navigationDrawer = document.querySelector(".navigation-drawer");
+			const drawerControl = document.querySelector(".drawer-control");
+			drawerControl.addEventListener("click", () => navigationDrawer.open = !navigationDrawer.open);
+		</script>
+    </body>
 </html>
