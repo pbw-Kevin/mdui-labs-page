@@ -88,14 +88,6 @@
 			const drawerControl = document.querySelector(".drawer-control");
 			drawerControl.addEventListener("click", () => navigationDrawer.open = !navigationDrawer.open);
 			const modeChoice = document.querySelector(".mode-choice");
-			modeChoice.addEventListener("click", () => {
-				if(mdui.getTheme() == 'dark'){
-					mdui.setTheme('light');
-				}
-				else{
-					mdui.setTheme('dark');
-				}
-			});
 			modeChoice.addEventListener("mouseout", () => {
 				if(mdui.getTheme() == 'light'){
 					modeChoice.icon = 'light_mode--outlined';
@@ -109,6 +101,16 @@
 					modeChoice.icon = 'light_mode--filled';
 				}
 				else{
+					modeChoice.icon = 'dark_mode--filled';
+				}
+			});
+			modeChoice.addEventListener("click", () => {
+				if(mdui.getTheme() == 'dark'){
+					mdui.setTheme('light');
+					modeChoice.icon = 'light_mode--filled';
+				}
+				else{
+					mdui.setTheme('dark');
 					modeChoice.icon = 'dark_mode--filled';
 				}
 			});
