@@ -35,6 +35,7 @@
             :root{
                 --mdui-color-text-light: 25, 28, 29;
                 --mdui-color-text-dark: 225, 227, 227;
+				--mdui-color-shadow-dark: 200, 200, 200;
             }
             mdui-top-app-bar{
                 background-color: rgb(var(--mdui-color-primary-container));
@@ -44,7 +45,7 @@
 				box-shadow: var(--mdui-elevation-level2);
 			}
 			a{
-				color: rgb(254, 134, 176);
+				color: rgb(254, 160, 201);
 				text-decoration: none;
 			}
 			a:hover{
@@ -64,8 +65,10 @@
 				<a class="top-title" href="/" style="font-size: 14px;">返回主页</a>&nbsp;
 				<a class="top-title" href="/blog/" style="font-size: 14px;">返回博客</a>
             </mdui-top-app-bar-title>
+			<div style="flex-grow: 1"></div>
+			<mdui-button-icon class="mode-choice" icon="light_mode--outlined"></mdui-button-icon>
         </mdui-top-app-bar>
-        <mdui-navigation-drawer class="navigation-drawer" open="true" close-on-overlay-click style="position: absolute; top: 64px;">
+        <mdui-navigation-drawer class="navigation-drawer" open="true" close-on-overlay-click style="position: fixed; top: 64px;">
             <mdui-list>
                 <mdui-list-item nonclickable>导航</mdui-list-item>
                 <mdui-list-item icon="home" href="/labs/">返回首页</mdui-list-item>
@@ -84,6 +87,31 @@
 			const navigationDrawer = document.querySelector(".navigation-drawer");
 			const drawerControl = document.querySelector(".drawer-control");
 			drawerControl.addEventListener("click", () => navigationDrawer.open = !navigationDrawer.open);
+			const modeChoice = document.querySelector(".mode-choice");
+			modeChoice.addEventListener("click", () => {
+				if(mdui.getTheme() == 'dark'){
+					mdui.setTheme('light');
+				}
+				else{
+					mdui.setTheme('dark');
+				}
+			});
+			modeChoice.addEventListener("mouseout", () => {
+				if(mdui.getTheme() == 'light'){
+					modeChoice.icon = 'light_mode--outlined';
+				}
+				else{
+					modeChoice.icon = 'dark_mode--outlined';
+				}
+			});
+			modeChoice.addEventListener("mouseover", () => {
+				if(mdui.getTheme() == 'light'){
+					modeChoice.icon = 'light_mode--filled';
+				}
+				else{
+					modeChoice.icon = 'dark_mode--filled';
+				}
+			});
 		</script>
     </body>
 </html>
