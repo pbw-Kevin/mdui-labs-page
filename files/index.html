@@ -7,17 +7,6 @@
 
         <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
         <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
-        
-        <script type="module">
-            mdui.setColorScheme('#B8FFEA', {
-                customColors: [
-                    {
-                        name: 'text',
-                        value: '#000000'
-                    }
-                ]
-            });
-        </script>
 
         <!-- Filled -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,8 +46,20 @@
             .top-title:hover{
                 color: rgb(var(--mdui-color-text));
             }
+            .tltle-link{
+                color: rgb(var(--mdui-color-text));
+            }
+            .title-link:hover{
+                color: rgb(var(--mdui-color-text));
+                text-decoration: underline;
+            }
+            mdui-list-subheader{
+                font-size: var(--mdui-typescale-label-medium-size);
+                font-weight: var(--mdui-typescale-label-medium-weight);
+            }
         </style>
-        <mdui-top-app-bar style="position: fixed;">
+
+        <mdui-top-app-bar class="top-app-bar" style="position: fixed;" hide>
             <mdui-button-icon icon="menu" class="drawer-control"></mdui-button-icon>
             <mdui-top-app-bar-title>
                 <a class="top-title" href="/labs/">AIR-Kevin的实验室</a>&nbsp;&nbsp;
@@ -68,21 +69,37 @@
             <div style="flex-grow: 1"></div>
             <mdui-button-icon class="mode-choice" icon="light_mode--outlined"></mdui-button-icon>
         </mdui-top-app-bar>
-        <mdui-navigation-drawer class="navigation-drawer" open="true" close-on-overlay-click style="position: fixed; top: 64px;">
+        <mdui-navigation-drawer class="navigation-drawer" open="false" close-on-overlay-click style="position: fixed; top: 64px;">
             <mdui-list>
-                <mdui-list-item nonclickable>导航</mdui-list-item>
+                <mdui-list-subheader style="height: 30px; line-height: 30px;">导航</mdui-list-subheader>
                 <mdui-list-item icon="home" href="/labs/">返回首页</mdui-list-item>
                 <mdui-list-item icon="search" href="/labs/search">搜索项目</mdui-list-item>
-                <mdui-list-item icon="bookmarks" href="/labs/tags">标签</mdui-list-item>
+                <mdui-list-item icon="label" href="/labs/tags">标签</mdui-list-item>
                 <mdui-list-item icon="info" href="/labs/about">关于本页</mdui-list-item>
             </mdui-list>
         </mdui-navigation-drawer>
         <mdui-bottom-app-bar>
             <p>
                 &copy; 2024 <a href="//air-kevin.rf.gd" rel="nofollow">AIR-Kevin</a><br>
-                由 <a href="https://www.mdui.org" rel="nofollow" target="_blank">MDUI</a> 提供设计支持
+                由 <a href="https://www.mdui.org" rel="nofollow" target="_blank">MDUI</a> 提供设计支持<br>
+                <a href="https://github.com/pbw-Kevin/mdui-labs-page" rel="nofollow" target="_blank">GitHub Repository</a>
             </p>
         </mdui-bottom-app-bar>
+
+        <script type="module">
+            const TopAppBar = document.querySelector(".top-app-bar");
+            const navigationDrawer = document.querySelector(".navigation-drawer");
+            mdui.setColorScheme('#B8FFEA');
+            await Promise.allSettled([
+                customElements.whenDefined('mdui-top-app-bar'),
+                customElements.whenDefined('mdui-navigation-drawer')
+            ]);
+            TopAppBar.hide = false;
+            if(mdui.breakpoint().up('md')){
+                navigationDrawer.open = true;
+            }
+        </script>
+
         <script>
             const navigationDrawer = document.querySelector(".navigation-drawer");
             const drawerControl = document.querySelector(".drawer-control");
