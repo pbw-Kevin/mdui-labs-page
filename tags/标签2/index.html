@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="icon" type="image/png" href="/static/icon.png">
+		<title>标签2 - AIR-Kevin的实验室</title>
+
+		<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+		<link rel="stylesheet" href="/labs/static/main.css">
+		<script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
+		<!-- Filled -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Outlined -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+		<!-- Rounded -->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"> -->
+		<!-- Sharp -->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet"> -->
+		<!-- Two Tone -->
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet"> -->
+	</head>
+	<body>
+		<mdui-top-app-bar class="top-app-bar" style="position: fixed;" hide>
+			<mdui-button-icon icon="menu" class="drawer-control"></mdui-button-icon>
+			<mdui-top-app-bar-title>
+				<a class="top-title" href="/labs/">AIR-Kevin的实验室</a>&nbsp;&nbsp;
+				<a class="top-title" href="/" style="font-size: 14px;">返回主页</a>&nbsp;
+				<a class="top-title" href="/blog/" style="font-size: 14px;">返回博客</a>
+			</mdui-top-app-bar-title>
+			<mdui-button-icon class="mode-choice" icon="light_mode--outlined"></mdui-button-icon>
+		</mdui-top-app-bar>
+		<mdui-navigation-drawer class="navigation-drawer" open="false" close-on-overlay-click
+			style="position: fixed; top: 64px;">
+			<mdui-list>
+				<mdui-list-subheader style="height: 30px; line-height: 30px;">导航</mdui-list-subheader>
+				<mdui-list-item icon="home" href="/labs/">返回首页</mdui-list-item>
+				<mdui-list-item icon="search" href="/labs/search">搜索项目</mdui-list-item>
+				<mdui-list-item icon="label" href="/labs/tags">标签</mdui-list-item>
+				<mdui-list-item icon="info" href="/labs/about">关于本页</mdui-list-item>
+			</mdui-list>
+		</mdui-navigation-drawer>
+		<mdui-bottom-app-bar>
+			<p>
+				&copy; 2024 <a href="//air-kevin.rf.gd">AIR-Kevin</a><br>
+				由 <a href="https://www.mdui.org" target="_blank">MDUI</a> 提供设计支持<br>
+				<a href="https://github.com/pbw-Kevin/mdui-labs-page" target="_blank">GitHub Repository</a>
+			</p>
+		</mdui-bottom-app-bar>
+
+		<div>
+			<p class="content-title">标签：标签2</p>
+			<div class="content">
+				<div class="repo-card-group">
+					<mdui-card class="repo-card">
+						<a class="title-link" href="/labs/repos/Repo1">Repo 1</a>
+						<p style="/labs/ margin-top: 0px;">简介~</p>
+						<div>
+							<mdui-chip href="/labs/tags/标签1">
+								标签1
+								<mdui-icon slot="icon" name="label"></mdui-icon>
+							</mdui-chip>
+							<mdui-chip href="/labs/tags/标签2">
+								标签2
+								<mdui-icon slot="icon" name="label"></mdui-icon>
+							</mdui-chip>
+						</div>
+						<mdui-chip href="#" style="background-color: #30C030;">
+							状态: Stable
+							<mdui-icon slot="icon" name="view_list--outlined"></mdui-icon>
+						</mdui-chip>
+					</mdui-card>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="/labs/static/init.js"></script>
+		<script src="/labs/static/main.js"></script>
+	</body>
+</html>
