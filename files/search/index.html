@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="icon" type="image/png" href="/static/icon.png">
-		<title>AIR-Kevin的实验室</title>
+		<title>搜索 - AIR-Kevin的实验室</title>
 
 		<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
 		<link rel="stylesheet" href="/labs/static/main.css">
@@ -51,12 +51,25 @@
 		</mdui-bottom-app-bar>
 
 		<div>
-			<p class="content-title">项目列表</p>
+			<p class="content-title">搜索</p>
 			<div class="content">
-				<div class="repo-card-group">
+				<div class="search-bar">
+					<mdui-text-field name="keyword" label="关键词" placeholder="标题、标签、作者、简介、正文……"
+						style="margin-right: -175px; padding-right: 175px;" disabled>
+					</mdui-text-field>
+					<mdui-select name="status" label="状态" placeholder="" style="width: 150px;" disabled>
+						<mdui-menu-item value="stable">Stable</mdui-menu-item>
+						<mdui-menu-item value="unstable">Unstable</mdui-menu-item>
+						<mdui-menu-item value="unknown">Unknown</mdui-menu-item>
+						<mdui-menu-item value="beta">Beta</mdui-menu-item>
+						<mdui-button-icon slot="end-icon" icon="keyboard_arrow_down"></mdui-button-icon>
+					</mdui-select>
+				</div>
+				<p style="text-align: center;">功能不可用</p>
+				<div class="repo-card-group" style="display: none;">
 					<mdui-card class="repo-card">
 						<a class="title-link" href="/labs/repos/Repo1">Repo 1</a>
-						<p style="font-size: 14px; height: 14px; margin-top: 0px;">简介~</p>
+						<p style="/labs/�~</p>
 						<div>
 							<mdui-chip href="/labs/tags/标签1">
 								标签1
@@ -73,8 +86,7 @@
 						</mdui-chip>
 					</mdui-card>
 					<mdui-card class="repo-card">
-						<a class="title-link" href="/labs/repos/Repo2">Repo 2</a>
-						<p style="font-size: 14px; height: 14px; margin-top: 0px;">简介~</p>
+						<a class="title-link" href="/labs/repos/Repo2">Repo 2</a>/labs/px; height: 14px; /labs/
 						<div>
 							<mdui-chip href="/labs/tags/标签1">
 								标签1
@@ -91,9 +103,7 @@
 						</mdui-chip>
 					</mdui-card>
 					<mdui-card class="repo-card">
-						<a class="title-link" href="/labs/repos/Repo3">Repo 3</a>
-						<p style="font-size: 14px; height: 14px; margin-top: 0px;">简介~</p>
-						<div>
+						<a class="title-link" href="/labs/repos/R/labs/le="font-size: 14px; height: 14px; margin-/labs/<div>
 							<mdui-chip href="/labs/tags/标签4">
 								标签4
 								<mdui-icon slot="icon" name="label"></mdui-icon>
@@ -105,10 +115,8 @@
 						</mdui-chip>
 					</mdui-card>
 					<mdui-card class="repo-card">
-						<a class="title-link" href="/labs/repos/Repo4">Repo 4</a>
-						<p style="font-size: 14px; height: 14px; margin-top: 0px;">简介~</p>
-						<div>
-							<mdui-chip href="/labs/tags/标签1">
+						<a class="title-link" hr/labs//a>
+						<p style="font-size: 14px; height: 14px; margin-top: 0p/labs/							<mdui-chip href="/labs/tags/标签1">
 								标签1
 								<mdui-icon slot="icon" name="label"></mdui-icon>
 							</mdui-chip>
