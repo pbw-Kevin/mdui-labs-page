@@ -1,0 +1,96 @@
+title:
+author:
+author-link:
+
+icon:
+apple_touch_icon:
+
+root:
+path:
+
+TopAppBar:
+    title:
+    ThemeMode:
+        mode:
+        switch:
+            enable:
+            RemUserHobby:
+                enable:
+                CookieName:
+
+BottomAppBar:
+    show:
+    custom:
+        enable:
+        content: ''
+
+NavMenu:
+    show: true;
+    subtitle: ''
+    list:
+        - {link: '', keyword: '', icon: ''}
+        - {link: '', keyword: '', icon: ''}
+        - {link: '', keyword: '', icon: ''}
+        - {link: '', keyword: '', icon: ''}
+        - {link: '', keyword: ''}
+
+links:
+    color:
+    colorHover:
+    HoverUnderline:
+
+showAfterLoaded:
+AutoHideNavMenu:
+
+repos:
+    link: '/repos/'
+    PerSize:
+        width: 375px
+        height: 160px
+    showOnPage:
+        BriefIntro: true
+        author: false
+        version: false
+        dates: false
+        tags: true
+        status: true
+    status:
+        - {name: 'Stable', color: '#30C030'}
+        - {name: 'Unstable', color: '#FFC000'}
+        - {name: 'Unknown', color: '#788888'}
+        - {name: 'Beta'}
+
+repo:
+    title: 'Repo: {}'
+    link: '/repos/{}'
+    Info:
+        icon:
+        name:
+        end-icon:
+    showOnPage:
+        BriefIntro: true
+        author: true
+        version: true
+        dates: true
+        tags: true
+        status: true
+    LinkRef:
+        enable: true
+        icon:
+        name:
+        end-icon:
+
+dates:
+    prep: at
+
+search:
+    enable: true
+    link: '/search/'
+    
+about:
+    enable: true
+    link: '/about/'
+    source: 'about.md'
+
+deploy:
+    type:
