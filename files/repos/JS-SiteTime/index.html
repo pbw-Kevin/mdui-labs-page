@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no">
 		<link rel="icon" type="image/png" href="/static/icon.png">
-		<title>标签 - AIR-Kevin的实验室</title>
+		<title>JS-SiteTime - 项目 - AIR-Kevin的实验室</title>
 
 		<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
 		<link rel="stylesheet" href="/static/main.css">
@@ -51,24 +51,68 @@
 		</mdui-bottom-app-bar>
 
 		<div>
-			<p class="content-title">标签</p>
+			<p class="content-title">项目：JS-SiteTime</p>
 			<div class="content">
-				<mdui-chip href="/tags/JavaScript">
-					JavaScript
-					<mdui-icon slot="icon" name="label"></mdui-icon>
-				</mdui-chip>
-				<mdui-chip href="/tags/标签2">
-					标签2
-					<mdui-icon slot="icon" name="label"></mdui-icon>
-				</mdui-chip>
-				<mdui-chip href="/tags/标签3">
-					标签3
-					<mdui-icon slot="icon" name="label"></mdui-icon>
-				</mdui-chip>
-				<mdui-chip href="/tags/标签4">
-					标签4
-					<mdui-icon slot="icon" name="label"></mdui-icon>
-				</mdui-chip>
+				<mdui-list class="repo-card-detail" style="padding: 0px 0px 0px 0px;">
+					<p>
+						基于JavaScript的网站运行时间显示插件
+					</p>
+					<mdui-collapse accordion>
+						<mdui-collapse-item>
+							<mdui-list-item slot="header" icon="info">
+								Tags
+								<mdui-icon slot="end-icon" name="keyboard_arrow_down"></mdui-icon>
+							</mdui-list-item>
+							<div style="margin: 10px 0px 0px 2.5rem">
+								<div>
+									<mdui-chip>
+										AIR-Kevin
+										<mdui-icon slot="icon" name="people"></mdui-icon>
+									</mdui-chip>
+									<mdui-chip>
+										Version 1.0
+									</mdui-chip>
+								</div>
+								<div>
+									<mdui-chip>
+										Created at 2024-06-29 11:58:27
+										<mdui-icon slot="icon" name="access_time"></mdui-icon>
+									</mdui-chip>
+									<mdui-chip>
+										Modified at 2024-06-29 11:58:27
+										<mdui-icon slot="icon" name="access_time"></mdui-icon>
+									</mdui-chip>
+								</div>
+								<div>
+									<mdui-chip href="/tags/JavaScript">
+										JavaScript
+										<mdui-icon slot="icon" name="label"></mdui-icon>
+									</mdui-chip>
+								</div>
+								<div>
+									<mdui-chip href="#" style="background-color: #30C030;">
+										状态: Stable
+										<mdui-icon slot="icon" name="view_list--outlined"></mdui-icon>
+									</mdui-chip>
+								</div>
+							</div>
+						</mdui-collapse-item>
+						<p>
+							一款基于JavaScript的，用于在网页中实时显示网站运行时间的小插件。<br>
+							使用指南和更多信息参见链接。
+						</p>
+						<mdui-collapse-item>
+							<mdui-list-item slot="header" icon="link">
+								Links
+								<mdui-icon slot="end-icon" name="keyboard_arrow_down"></mdui-icon>
+							</mdui-list-item>
+							<div style="margin-left: 2.5rem">
+								<a href="//blog.air-kevin.rf.gd/2024/JS-SiteTime">博客文章</a><br/>
+								<a href="https://github.com/pbw-Kevin/JS-SiteTime" target="_blank">GitHub Repository</a>
+							</div>
+						</mdui-collapse-item>
+					</mdui-collapse>
+				</mdui-list>
 			</div>
 		</div>
 
